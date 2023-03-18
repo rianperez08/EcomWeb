@@ -4,7 +4,9 @@ import { Navbar } from "./components/navbar";
 import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
+import { LandingPage } from "./pages/landingpage/landingpage";
 import { ShopContextProvider } from "./context/shop-context";
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
             <Route path="/" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/landingpage" element={<LandingPage />} />
           </Routes>
         </Router>
       </ShopContextProvider>
