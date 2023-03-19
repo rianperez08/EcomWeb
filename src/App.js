@@ -7,6 +7,7 @@ import { Cart } from "./pages/cart/cart";
 import { Login } from "./pages/login/login";
 import { ShopContextProvider } from "./context/shop-context";
 
+
 function App() {
   return (
     <div className="App">
