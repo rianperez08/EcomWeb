@@ -1,0 +1,51 @@
+/* PAGE TRANSITION */
+
+#fade {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+/* IMG */
+
+#ip {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/*end IMG */
+
+#homeprd{
+    padding-top:10px;
+    color:black;
+    text-align:center;
+}
+
+#prdbuy{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#divhelp{
+    background-color:black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left:80px;
+    padding-right:80px;
+}
+
+#help{
+    color: white;
+    font-weight: 600;
+}
+
