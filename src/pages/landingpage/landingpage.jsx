@@ -61,8 +61,6 @@ export const LandingPage = () => {
                 </Carousel>
             </div>
 
-            
-
             <div style={divpad}>
                 <h2>What's New?</h2>
                 <br></br>
@@ -108,7 +106,7 @@ export const LandingPage = () => {
                     <Button variant="light" id="prdbuy">Contact Us</Button>{' '}
                 </a>
             </div>
-        </div>;
+        </div>
 
         
     </>

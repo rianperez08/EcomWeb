@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/navbar";
+import { NavbarBS } from "./components/navbar";
 import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <ShopContextProvider>
         <Router>
-          <Navbar />
+          <NavbarBS />
           <Routes>
-            <Route path="/" element={<Shop />} />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/landingpage" element={<LandingPage />} />
+            <Route path="/" element={<LandingPage />} />
           </Routes>
         </Router>
       </ShopContextProvider>
