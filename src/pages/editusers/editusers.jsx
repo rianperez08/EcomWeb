@@ -2,43 +2,93 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import "./editusers.css";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Form } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 
+
+
+
 export const EditUsers = () => {
+
+ 
     return (
-        <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
+        
+        
+        <form>
+            <Table striped bordered hover id="tablead">
+                <thead>
+                    <tr>
+                    <th>USERNAME</th>
+                    <th>EMAIL</th>
+                    <th>PASSWORD</th>
+                    <th>ADDRESS</th>
+                    <th>CONTACT NO.</th>
+                    <th>ACCESS</th>
+                    <th>ACTIONS </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="text" 
+                            placeholder="Username" 
+                            name="username"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="email" 
+                            placeholder="Email" 
+                            name="email"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="password" 
+                            placeholder="Password" 
+                            name="pass"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="text" 
+                            placeholder="Address" 
+                            name="address"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="tel" 
+                            placeholder="Phone no." 
+                            name="phoneno"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                        <Form.Group>
+                            <Form.Control 
+                            type="text" 
+                            placeholder="Access" 
+                            name="Access"/>
+                        </Form.Group>
+                    </td>
+                    <td>
+                    <Button variant="light" id="">Update</Button>{' '}
+                    <Button variant="danger" id="">Delete</Button>{' '}
+                    </td>
+                </tr>
+                                    
+                        
+                    
+                  
+                </tbody>
+            </Table>
+        </form>
     );
 
 }
