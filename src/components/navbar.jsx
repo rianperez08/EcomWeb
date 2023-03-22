@@ -41,8 +41,11 @@ export const NavbarBS = () => {
                 <NavDropdown.Item href="/login">Login</NavDropdown.Item>
                 <NavDropdown.Item href="/dbTest">Test</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="">
+                <NavDropdown.Item href="/register">
                   Create Account
+                </NavDropdown.Item>
+                <NavDropdown.Item href="">
+                  Edit User
                 </NavDropdown.Item>
               </Container>
             </NavDropdown>

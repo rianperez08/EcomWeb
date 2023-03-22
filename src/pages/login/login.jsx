@@ -78,7 +78,7 @@ export const Login = () => {
                     <Form.Group>
                         <Form.Control 
                         type="password" 
-                        placeholder="Passowrd" 
+                        placeholder="Password" 
                         name="pass"/>
                     </Form.Group>
 

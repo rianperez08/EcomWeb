@@ -5,6 +5,7 @@ import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 import { Login } from "./pages/login/login";
+import { Register } from "./pages/register/register";
 import { LandingPage } from "./pages/landingpage/landingpage";
 import { ShopContextProvider } from "./context/shop-context";
 import { Footer } from "./components/footer";
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/dbTest" element={<DbTest />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>

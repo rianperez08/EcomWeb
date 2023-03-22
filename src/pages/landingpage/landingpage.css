@@ -37,15 +37,24 @@
 }
 
 #divhelp{
-    background-color:rgb(24, 24, 24);
+    background-color:rgb(34, 34, 34);
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left:80px;
     padding-right:80px;
+    
 }
 
 #help{
     color: white;
-    font-weight: 600;
+    font-weight: 550;
+    text-align: left;
 }
 
+#conbut{
+    margin-bottom: 20px;
+}
+
+.inner{
+    display:inline-block;
+}

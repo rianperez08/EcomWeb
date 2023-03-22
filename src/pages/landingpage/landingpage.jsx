@@ -101,10 +101,14 @@ export const LandingPage = () => {
             </div>
 
             <div id="divhelp">
-                <h1 id="help">Need Help?</h1>
-                <a href="/">
-                    <Button variant="light" id="prdbuy">Contact Us</Button>{' '}
-                </a>
+                <div className="inner">
+                    <h1 id="help">Need Help?</h1>
+                </div>
+                <div className="inner">
+                    <a href="/">
+                        <Button variant="light" id="conbut">Contact Us</Button>{' '}
+                    </a>
+                </div>
             </div>
         </div>
 
