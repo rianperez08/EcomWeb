@@ -6,6 +6,7 @@ import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 import { LandingPage } from "./pages/landingpage/landingpage";
 import { ShopContextProvider } from "./context/shop-context";
+import { Footer } from "./components/footer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           </Routes>
         </Router>
       </ShopContextProvider>
+      <Footer />
     </div>
   );
 }

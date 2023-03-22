@@ -49,6 +49,7 @@ export const NavbarBS = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+      
 
     // <div className="navbar">
     //   <div className="links">
