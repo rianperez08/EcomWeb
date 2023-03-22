@@ -38,7 +38,8 @@ export const NavbarBS = () => {
             </a>
             <NavDropdown title="Account" align="end" id="basic-nav-dropdown">
               <Container id="nav-dropdown-con">
-                <NavDropdown.Item href="">Login</NavDropdown.Item>
+                <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+                <NavDropdown.Item href="/dbTest">Test</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="">
                   Create Account

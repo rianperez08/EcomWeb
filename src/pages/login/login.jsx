@@ -5,7 +5,6 @@ import {Row, Col, Container, Button, Form} from 'react-bootstrap';
 import "./login.css";
 import { db } from './firebase-config';
 import { collection, getDocs } from "@firebase/firestore";
-
 import { Routes, Route } from 'react-router-dom';
 
 
