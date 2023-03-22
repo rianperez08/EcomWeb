@@ -12,7 +12,7 @@ export const Register = () => {
     return (
         <Container className="register-form">
             <div align="center">
-                <img style={{ width: '11%', margintop: '-2%'}}  
+                <img id="icn" style={{ width: '11%', margintop: '-2%'}}  
                 src="http://cdn.onlinewebfonts.com/svg/img_202755.png" alt="no_img.png"/>
             </div>
 

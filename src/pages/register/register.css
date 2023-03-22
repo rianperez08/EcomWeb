@@ -25,6 +25,9 @@
     border: 0.8px solid #696969;
 }
 
+#icn{
+
+}
 #radiogrp{
     background-color: rgb(255, 255, 255);
     color: black;
@@ -36,7 +39,7 @@
     -webkit-transition: 0.3s;
 }
 #regrow{
-    padding-top: 100px;
+    padding-top: 20%;
 }
 
 .register-form .btnContact {
