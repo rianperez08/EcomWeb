@@ -6,7 +6,7 @@
     border-radius:25px;
 }
 
-[type=email],[type=password],[type=text]{
+[type=email],[type=password],[type=text],[type=tel]{
     background-color: rgb(219, 219, 219);
     color: black;
     padding: 15px; 
@@ -18,7 +18,7 @@
     
 }
 
-[type=email]:focus,[type=password]:focus,[type=text]:focus {
+[type=email]:focus,[type=password]:focus,[type=text]:focus,[type=tel]:focus {
     box-shadow: none !important;
     outline-offset: 0;
     background-color: rgb(219, 219, 219);

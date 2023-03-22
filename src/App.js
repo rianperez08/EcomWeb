@@ -10,7 +10,7 @@ import { LandingPage } from "./pages/landingpage/landingpage";
 import { ShopContextProvider } from "./context/shop-context";
 import { Footer } from "./components/footer";
 import { DbTest } from "./pages/login/dbTest";
-
+import { EditUsers } from "./pages/editusers/editusers";
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dbTest" element={<DbTest />} />
+            <Route path="/editusers" element={<EditUsers />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>
         </Router>

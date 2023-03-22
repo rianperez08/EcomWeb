@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import "./register.css";
@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import { Form } from 'react-bootstrap';
 
 export const Register = () => {
+    const [visible, setVisible]=useState(false);
 
     return (
         <Container className="register-form">
@@ -64,13 +65,26 @@ export const Register = () => {
                                         name="group1"
                                         type={type}
                                         id={`cod`}
+                                        value="cod"
+                                        onClick={ ()=>setVisible(false)}
                                     />
                                     <Form.Check
                                         label="Gcash"
                                         name="group1"
                                         type={type}
                                         id={`gcash`}
+                                        value="gcash"
+                                        onClick={ ()=>setVisible(true)}
                                     />
+
+                                    { visible &&
+                                        <Form.Control 
+                                        type="tel" 
+                                        placeholder="Phone no." 
+                                        name="phoneno"/>
+                                    }
+
+                                    
                                 </div>
                             ))}
                             </Form.Group>
