@@ -1,0 +1,33 @@
+.contact{
+    padding-bottom: 200px;
+    
+}
+
+.contacttitlediv{
+    background-color: black;
+}
+
+.contactTitle{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 40px;
+    display: inline-block;
+    color: white;
+}
+
+.contactTitle h1{
+    font-weight: 300;
+}
+
+.concontent{
+    margin-top: 100px;
+}
+
+.concontent h1{
+    display: inline-block;
+}
+
+#connum{
+    font-weight: 400;
+    color: rgb(0, 8, 255);
+}
