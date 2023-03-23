@@ -38,7 +38,8 @@ export const Login = () => {
         {users.map((user) => {
             if (event.target[0].value == user.email || event.target[0].value == user.username) {
                 if (event.target[1].value == user.password){
-                    sessionStorage.setItem("userName", user.username);
+                    window.localStorage.setItem("LoggedIn", user.access);
+                    window.localStorage.setItem("ID", user.id);
                     navigate("/");
                 }
                 console.log("Nop");

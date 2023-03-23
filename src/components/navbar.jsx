@@ -8,6 +8,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 export const NavbarBS = () => {
+  const signOut = async () =>{
+    window.localStorage.clear();
+    window.location.href = "/";
+  }
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" id="Nav">
       <Container id="con">
@@ -38,15 +43,20 @@ export const NavbarBS = () => {
             </a>
             <NavDropdown title="Account" align="end" id="basic-nav-dropdown">
               <Container id="nav-dropdown-con">
-                <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-                <NavDropdown.Item href="/dbTest">Test</NavDropdown.Item>
+                { window.localStorage.getItem('LoggedIn') == null ? 
+                  <NavDropdown.Item href="/login">Login</NavDropdown.Item> : <NavDropdown.Item onClick={() => {signOut()}}>Logout</NavDropdown.Item>
+                }
+                
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/register">
-                  Create Account
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/editusers">
-                  Edit User
-                </NavDropdown.Item>
+
+                { window.localStorage.getItem('LoggedIn') == null || window.localStorage.getItem('LoggedIn') < 0 ? 
+                  <NavDropdown.Item href="/register"> Sign Up </NavDropdown.Item> : <NavDropdown.Item href="/editProfile"> Profile Settings </NavDropdown.Item>
+                }
+
+                { window.localStorage.getItem('LoggedIn') == 1 ? 
+                  <NavDropdown.Item href="/editusers"> Edit Users </NavDropdown.Item> : console.log("Not Admin!")
+                }
+                
               </Container>
             </NavDropdown>
           </Nav>
