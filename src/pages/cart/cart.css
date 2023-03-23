@@ -1,8 +1,12 @@
+
 .cart {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom:300px;
+  display: inline-block;
+
 }
 
 .cartItem {
