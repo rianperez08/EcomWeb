@@ -57,7 +57,7 @@ export const NavbarBS = () => {
                 { window.localStorage.getItem('LoggedIn') == 1 ? 
                   <NavDropdown.Item href="/editusers"> Edit Users </NavDropdown.Item> : console.log("Not Admin!")
                 }
-                
+                <NavDropdown.Item href="/purchasehist"> Purchase History </NavDropdown.Item>
               </Container>
             </NavDropdown>
           </Nav>
