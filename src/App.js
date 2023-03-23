@@ -13,6 +13,7 @@ import { Footer } from "./components/footer";
 import { DbTest } from "./pages/login/dbTest";
 import { EditUsers } from "./pages/editusers/editusers";
 import { EditProfile } from "./pages/editprofile/editProfile"
+import { PurchaseHist } from "./pages/purchasehist/purchasehist";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/dbTest" element={<DbTest />} />
             <Route path="/editusers" element={<EditUsers />} />
             <Route path="/editProfile" element={<EditProfile />} />
+            <Route path="/purchasehist" element={<PurchaseHist />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>
         </Router>
