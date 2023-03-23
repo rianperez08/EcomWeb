@@ -20,32 +20,30 @@ export const Cart = () => {
   //Sent stuff to Database
   const usersCollectionRef = collection(db, "users");
   const [users, setUsers] = useState([]);
-  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-
     const getUsers = async () => {
         const data = await getDocs(usersCollectionRef);
-        //console.log(data);
         setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id })));
     };
-
     getUsers();
-    {users.map((users) => 
-      users.id == window.localStorage.getItem("ID") ? setTotal(users.total) : setTotal(users.total) 
-    )}
 
   }, []);
 
+  
 
-  const updateUser = async () => {
-      const userDoc = doc(db, "users", window.localStorage.getItem("ID"));
-      totalAmount += total;
-      await updateDoc(userDoc, { total: (totalAmount)});
+  function updateTotal() {
+    const userDoc = doc(db, "users", window.localStorage.getItem("ID"));
+    users.map((user) => {
+      if (user.id == window.localStorage.getItem("ID")) {
+        updateDoc(userDoc, { total: user.total + getTotalCartAmount()});
+      }
+    })
   };
 
   return (
     <div className="cart">
+      
       <div>
         <h1>Your Cart Items</h1>
       </div>
@@ -61,9 +59,10 @@ export const Cart = () => {
         <div className="checkout">
           <p> Subtotal: ${totalAmount} </p>
           <Button variant="dark" onClick={() => navigate("/shop")} id="cshop"> Continue Shopping </Button>
-          <Button variant="dark" onClick={() => { checkout(); updateUser(); navigate("/confirmation"); }} id="checkout" >
+          <Button variant="dark" onClick={() => { updateTotal(); checkout();   }} id="checkout" >
             {" "} Checkout {" "}
-          </Button>
+            {/* navigate("/confirmation"); */}
+          </Button> 
         </div>
       ) : (
         <h1> Your Shopping Cart is Empty</h1>

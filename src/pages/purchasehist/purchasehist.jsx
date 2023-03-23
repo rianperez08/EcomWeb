@@ -5,6 +5,10 @@ import "./purchasehist.css";
 import { Form } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 
+//Database Stuff
+import { db } from './firebase-config';
+import { collection, doc, getDocs, addDoc, deleteDoc, updateDoc } from "@firebase/firestore";
+
 export const PurchaseHist = () => {
 
     return (
