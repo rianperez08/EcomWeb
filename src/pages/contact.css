@@ -21,11 +21,17 @@
 
 .concontent{
     margin-top: 100px;
+    max-width: 700px;
+    margin-inline: auto;
     
 }
 
 #pcon{
-    white-space: pre;
+    display: flex;
+    flex-wrap: wrap;
+    text-align:center;
+    justify-content: center;
+    
 }
 
 .concontent h1{

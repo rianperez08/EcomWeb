@@ -4,6 +4,7 @@ import { NavbarBS } from "./components/navbar";
 import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
+import { Confirmation } from "./pages/cart/confirmation";
 import { Login } from "./pages/login/login";
 import { Register } from "./pages/register/register";
 import { LandingPage } from "./pages/landingpage/landingpage";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dbTest" element={<DbTest />} />
