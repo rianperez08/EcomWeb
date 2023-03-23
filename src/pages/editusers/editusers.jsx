@@ -82,7 +82,7 @@ export const EditUsers = () => {
     return (
         
         
-        <form>
+        <form className="tablee">
             <Table striped bordered hover id="tablead">
                 <thead>
                     <tr>

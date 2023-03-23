@@ -1,6 +1,9 @@
 
 #tablead{
     margin-bottom: 100px;
+    align-items: center;
+    margin: 0 auto;
+    
 }
 #total{
     font-weight: bold;
