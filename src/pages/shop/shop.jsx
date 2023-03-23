@@ -9,6 +9,7 @@ export const Shop = () => {
       <div className="shopTitle">
         <h1>KALARO TECH SHOP</h1>
       </div>
+      <hr id="line"></hr>
 
       <div className="products">
         {PRODUCTS.map((product) => (
