@@ -151,9 +151,10 @@ export const EditUsers = () => {
                         onChange={(event) => setContactNo(event.target.value)}/>
                     </Form.Group>
                     </td>
-
-                    <td>
-                        {users.total}
+                    
+                    <td id="total">
+                        <br></br>
+                        ${users.total}
                     </td>
 
 
