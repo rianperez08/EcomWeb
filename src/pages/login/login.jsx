@@ -56,42 +56,45 @@ export const Login = () => {
 
 
     return (
-        <Container className="contact-form">
-        
-        <div align="center">
-            <img style={{ width: '11%', margintop: '-2%'}}  
-            src="http://cdn.onlinewebfonts.com/svg/img_202755.png" alt="no_img.png"/>
-        </div>
 
-        <Row>
-        <Form onSubmit={HandleSubmit}>
-            <h1>LOG IN</h1>
+        <div id="fade">
+            <Container className="contact-form">
+            
+            <div align="center">
+                <img style={{ width: '11%', margintop: '-2%'}}  
+                src="http://cdn.onlinewebfonts.com/svg/img_202755.png" alt="no_img.png"/>
+            </div>
+
             <Row>
-                <Col className="mx-auto" style={{maxwidth: '50%'}}>
-                    <Form.Group>
-                        <Form.Control 
-                        type="email" 
-                        placeholder="Email" 
-                        name="email"/>
-                    </Form.Group>
+            <Form onSubmit={HandleSubmit}>
+                <h1>LOG IN</h1>
+                <Row>
+                    <Col className="mx-auto" style={{maxwidth: '50%'}}>
+                        <Form.Group>
+                            <Form.Control 
+                            type="email" 
+                            placeholder="Email" 
+                            name="email"/>
+                        </Form.Group>
 
-                    <Form.Group>
-                        <Form.Control 
-                        type="password" 
-                        placeholder="Password" 
-                        name="pass"/>
-                    </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                            type="password" 
+                            placeholder="Password" 
+                            name="pass"/>
+                        </Form.Group>
 
-                    <Form.Group align="center">
-                        <Button className="btnContact"  type="submit"> LOG IN </Button>
-                        {/* <a href=""><button type="button" style={{color: '#fff', background: '#4285f4', width: '100%'}} className="btnContact">Sign Up</button></a> */}
-                    </Form.Group>
-                </Col>
+                        <Form.Group align="center">
+                            <Button className="btnContact"  type="submit"> LOG IN </Button>
+                            {/* <a href=""><button type="button" style={{color: '#fff', background: '#4285f4', width: '100%'}} className="btnContact">Sign Up</button></a> */}
+                        </Form.Group>
+                    </Col>
+                </Row>
+            </Form>
             </Row>
-        </Form>
-        </Row>
 
-        </Container>
+            </Container>
+        </div>
       );
     
 

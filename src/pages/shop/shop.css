@@ -1,8 +1,18 @@
+.shoptitlediv{
+  background-color: black;
+}
+
 .shopTitle {
   margin-top: 100px;
   text-align: center;
   font-size: 40px;
   display: inline-block;
+  color: white;
+  
+}
+
+.shopTitle h1{
+  font-weight: 300;
 }
 
 #line{
