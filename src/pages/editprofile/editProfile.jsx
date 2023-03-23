@@ -77,10 +77,12 @@ export const EditProfile = () => {
             <Row id="regrow">
                 <form>
                     <h1>UPDATE ACCOUNT</h1>
+                    
                     {users.map((users) => 
                     users.id == window.localStorage.getItem("ID") ?
-                        
+                     
                     <Row>
+                        <h3>Total: {users.total}</h3>  
                         <Col className="mx-auto" style={{maxwidth: '50%'}}>
                             <Form.Group>
                                 <Form.Control 

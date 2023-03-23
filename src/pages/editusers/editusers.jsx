@@ -91,6 +91,7 @@ export const EditUsers = () => {
                     <th>PASSWORD</th>
                     <th>ADDRESS</th>
                     <th>CONTACT NO.</th>
+                    <th>TOTAL</th>
                     <th>ACCESS</th>
                     <th>ACTIONS </th>
                     </tr>
@@ -150,6 +151,12 @@ export const EditUsers = () => {
                         onChange={(event) => setContactNo(event.target.value)}/>
                     </Form.Group>
                     </td>
+
+                    <td>
+                        {users.total}
+                    </td>
+
+
                     <td>
                     <Form.Group>
                         <Form.Control 
@@ -160,6 +167,8 @@ export const EditUsers = () => {
                         onChange={(event) => setAccess(event.target.value)}/>
                     </Form.Group>
                     </td>
+                    
+
                     <td>
                     <Button onClick={() => {updateUser(users.id)}} variant="light" type="button">Update</Button>{' '}
                     <Button onClick={() => {deleteUser(users.id)}} variant="danger" type="button">Delete</Button>{' '}

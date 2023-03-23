@@ -23,6 +23,7 @@ export const Register = () => {
     const [address, setAddress] = useState('');
     const [contactNo, setContactNo] = useState('N/A');
     const [access, setAccess] = useState(0);
+    const [total, setTotal] = useState(0);
     const navigate = useNavigate();
 
     const RegisterUser = async (event) => {
@@ -35,7 +36,8 @@ export const Register = () => {
                 password: pass,
                 address: address,
                 contactNo: contactNo,
-                access: access
+                access: access,
+                total: total
             });
             navigate("/login");
         }else{
