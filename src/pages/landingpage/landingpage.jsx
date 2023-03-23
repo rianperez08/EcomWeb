@@ -67,7 +67,7 @@ export const LandingPage = () => {
                 <Container>
                     <Row>
                         <Col sm>
-                            <img id="ip" src="homeprod/4.png" class="d-block w-100"
+                            <img id="ip" src="homeprod/4.png" className="d-block w-100"
                             alt="14pro"/>
                             <p id="homeprd">IPhone 14 Pro Max
                                 <br></br>
@@ -77,7 +77,7 @@ export const LandingPage = () => {
                             </p>
                         </Col>
                         <Col sm>
-                            <img id="ip" src="homeprod/5.png" class="d-block w-100"
+                            <img id="ip" src="homeprod/5.png" className="d-block w-100"
                             alt="14"/>
                             <p id="homeprd">IPhone 14
                                 <br></br>
@@ -87,7 +87,7 @@ export const LandingPage = () => {
                             </p>
                         </Col>
                         <Col sm>
-                            <img id="ip" src="homeprod/6.png" class="d-block w-100"
+                            <img id="ip" src="homeprod/6.png" className="d-block w-100"
                             alt="14pro"/>
                             <p id="homeprd">IPhone 13
                                 <br></br>
