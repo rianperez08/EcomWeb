@@ -10,17 +10,11 @@ export const Footer = () => {
                         <h4>Shop Apple</h4>
                         <ul className="list-unstyled">
                             <li>Iphone</li>
-                            <li>Iphone</li>
-                            <li>Iphone</li>
-                            <li>Iphone</li>
                         </ul>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <h4>Shop Iphone</h4>
                         <ul className="list-unstyled">
-                            <li>Iphone</li>
-                            <li>Iphone</li>
-                            <li>Iphone</li>
                             <li>Iphone</li>
                         </ul>
                     </div>
