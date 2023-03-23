@@ -36,10 +36,10 @@ export const Login = () => {
         event.preventDefault();
         var { email, pass } = document.forms[0];
         {users.map((user) => {
-            if (event.target[0].value == user.email) {
+            if (event.target[0].value == user.email || event.target[0].value == user.username) {
                 if (event.target[1].value == user.password){
                     sessionStorage.setItem("userName", user.username);
-                    navigate("/landingpage");
+                    navigate("/");
                 }
                 console.log("Nop");
             }
@@ -72,8 +72,8 @@ export const Login = () => {
                     <Col className="mx-auto" style={{maxwidth: '50%'}}>
                         <Form.Group>
                             <Form.Control 
-                            type="email" 
-                            placeholder="Email" 
+                            type="text" 
+                            placeholder="Email / Username" 
                             name="email"/>
                         </Form.Group>
 
