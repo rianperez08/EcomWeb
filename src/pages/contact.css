@@ -21,6 +21,11 @@
 
 .concontent{
     margin-top: 100px;
+    
+}
+
+#pcon{
+    white-space: pre;
 }
 
 .concontent h1{
@@ -30,4 +35,12 @@
 #connum{
     font-weight: 400;
     color: rgb(0, 8, 255);
+}
+
+li {
+   list-style-type: none; 
+}
+
+.accord{
+    margin:0 auto;
 }

@@ -21,9 +21,9 @@ export const Product = (props) => {
         </p>
         <p> ${price}</p>
       </div>
-      <Button variant="dark" className="addToCartBttn" onClick={() => addToCart(id)}>
+      <button variant="dark" className="addToCartBttn" onClick={() => addToCart(id)}>
         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
-      </Button>
+      </button>
     </div>
   </div>
   );
