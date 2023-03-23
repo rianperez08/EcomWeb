@@ -14,7 +14,13 @@ export const Contact = () => {
         <div id="fade">
           <div className="concontent">
             <h1>Reach out to us.</h1>
-            <div className="accord">
+            <p id="pcon">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo. 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, temporibus! 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, suscipit! 
+            </p>
+            
+            
+            <div className="accord" style={{maxWidth:"1200px"}}>
               <Accordion flush>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>E-mail</Accordion.Header>
