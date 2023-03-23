@@ -7,8 +7,41 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Form } from 'react-bootstrap';
 
+//Database Stuff
+import { db } from './firebase-config';
+import { collection, getDocs, addDoc } from "@firebase/firestore";
+import {useNavigate} from 'react-router-dom';
+
 export const Register = () => {
     const [visible, setVisible]=useState(false);
+
+    const userDbCollectionTargA = collection(db, "users");
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [passConf, setPassConf] = useState('');
+    const [address, setAddress] = useState('');
+    const [contactNo, setContactNo] = useState('N/A');
+    const [access, setAccess] = useState(0);
+    const navigate = useNavigate();
+
+    const RegisterUser = async (event) => {
+        event.preventDefault();
+
+        if (pass === passConf) {
+            await addDoc(userDbCollectionTargA, { 
+                username: userName, 
+                email: email,
+                password: pass,
+                address: address,
+                contactNo: contactNo,
+                access: access
+            });
+            navigate("/login");
+        }else{
+            console.log("Password Does Not Match!")
+        }
+    };
 
     return (
         <Container className="register-form">
@@ -26,35 +59,40 @@ export const Register = () => {
                                 <Form.Control 
                                 type="text" 
                                 placeholder="Username" 
-                                name="username"/>
+                                name="username"
+                                onChange={(event)=>setUserName(event.target.value)}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Control 
                                 type="email" 
                                 placeholder="Email" 
-                                name="email"/>
+                                name="email"
+                                onChange={(event)=>setEmail(event.target.value)}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Control 
                                 type="password" 
                                 placeholder="Password" 
-                                name="pass"/>
+                                name="pass"
+                                onChange={(event)=>setPass(event.target.value)}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Control 
                                 type="password" 
                                 placeholder="Confirm Password" 
-                                name="cpass"/>
+                                name="cpass"
+                                onChange={(event)=>setPassConf(event.target.value)}/>
                             </Form.Group>
 
                             <Form.Group>
                                 <Form.Control 
                                 type="text" 
                                 placeholder="Address" 
-                                name="address"/>
+                                name="address"
+                                onChange={(event)=>setAddress(event.target.value)}/>
                             </Form.Group>
 
                             <Form.Group id="radiogrp">
@@ -81,7 +119,8 @@ export const Register = () => {
                                         <Form.Control 
                                         type="tel" 
                                         placeholder="Phone no." 
-                                        name="phoneno"/>
+                                        name="phoneno"
+                                        onChange={(event)=>setContactNo(event.target.value)}/>
                                     }
 
                                     
@@ -90,7 +129,7 @@ export const Register = () => {
                             </Form.Group>
 
                             <Form.Group align="center">
-                                <Button className="btnContact"  type="submit"> REGISTER </Button>
+                                <Button onClick={RegisterUser} className="btnContact"  type="submit"> REGISTER </Button>
                             </Form.Group>
                         </Col>
                     </Row>
